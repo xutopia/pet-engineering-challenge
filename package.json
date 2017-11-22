@@ -18,6 +18,7 @@
   "homepage": "https://github.com/xutopia/pet-engineering-challenge#readme",
   "dependencies": {
     "bloom-filters": "^0.5.1",
-    "csvjson": "^4.3.4"
+    "csvjson": "^4.3.4",
+    "path": "^0.12.7"
   }
 }
