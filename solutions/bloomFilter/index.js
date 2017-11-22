@@ -8,7 +8,7 @@ const { BloomFilter } = require('bloom-filters');
  * @param {Number} occurences
  * @return {Array} pairs - list of pairs of doctors that match the criteria
  */
-const findPairsInListsByBruteForce = function(file, occurences = 40) {
+const findPairsInListsByBloomFilter = function(file, occurences = 40) {
   const data = stdinput(file);
   let bloomFilter = new BloomFilter(1000000, 0.01);
   let doctorPairs = {};
@@ -45,4 +45,4 @@ const findPairsInListsByBruteForce = function(file, occurences = 40) {
   return pairs;
 }
 
-findPairsInListsByBruteForce('./care_teams.csv');
+findPairsInListsByBloomFilter('./care_teams.csv');
