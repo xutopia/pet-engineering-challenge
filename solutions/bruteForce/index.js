@@ -1,4 +1,5 @@
 const stdinput = require('../../io/stdinput');
+const stdoutput = require('../../io/stdoutput');
 const csvjson = require('csvjson');
 const fs = require('fs');
 
@@ -34,8 +35,12 @@ const findPairsInListsByBruteForce = function(file, occurences = 40) {
       pairs.push(doctors);
     }
   }
-  // console.log(pairs);
+  console.log(pairs);
+  // let results = json2csv({ fields, data: pairs.join('\n') });
+
+  stdoutput(pairs, `bruteForceResult.csv`);
   return pairs;
+  json
 }
 
 findPairsInListsByBruteForce('./care_teams.csv');
