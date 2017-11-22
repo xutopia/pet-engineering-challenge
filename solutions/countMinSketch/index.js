@@ -37,4 +37,6 @@ const findPairsInListsByCountMinSketch = function(file, occurences = 40, epsilon
   return pairs;
 }
 
+module.exports = findPairsInListsByCountMinSketch;
+
 findPairsInListsByCountMinSketch('./care_teams.csv');

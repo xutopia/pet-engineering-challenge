@@ -38,4 +38,6 @@ const findPairsInListsByBruteForce = function(file, occurences = 40) {
   return pairs;
 }
 
+module.exports = findPairsInListsByBruteForce;
+
 findPairsInListsByBruteForce('./care_teams.csv');

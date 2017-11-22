@@ -45,4 +45,6 @@ const findPairsInListsByBloomFilter = function(file, occurences = 40) {
   return pairs;
 }
 
+module.exports = findPairsInListsByBloomFilter;
+
 findPairsInListsByBloomFilter('./care_teams.csv');
