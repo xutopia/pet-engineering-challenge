@@ -7,11 +7,11 @@ const { CountMinSketch } = require('bloom-filters');
  * @param {File} csvFile
  * @param {Number} occurences
  * @param {Boolean} writeToFile
- * @param {Number} epsilon - custom value for epsilon in the CM-Sketch (default: 0.00001)
- * @param {Number} delta - custom value for delta in the CM-Sketch (default: 0.99999)
+ * @param {Number} epsilon - custom value for epsilon in the CM-Sketch (default: 0.000001)
+ * @param {Number} delta - custom value for delta in the CM-Sketch (default: 0.999999)
  * @return {Array} pairs - list of pairs of doctors that match the criteria
  */
-const findPairsInListsByCountMinSketch = function(file, occurences = 40, writeToFile, epsilon = 0.00001, delta = 0.99999) {
+const findPairsInListsByCountMinSketch = function(file, occurences = 40, writeToFile, epsilon = 0.000001, delta = 0.999999) {
   const data = stdinput(file);
   let sketch = new CountMinSketch(epsilon, delta);
   let doctorPairs = {};
@@ -34,9 +34,7 @@ const findPairsInListsByCountMinSketch = function(file, occurences = 40, writeTo
   });
 
   for (let doctors in doctorPairs) {
-    if (doctorPairs[doctors]) {
-      pairs.push(doctors);
-    }
+    pairs.push(doctors);
   }
 
   if (writeToFile) {

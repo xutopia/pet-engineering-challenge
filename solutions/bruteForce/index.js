@@ -43,4 +43,4 @@ const findPairsInListsByBruteForce = function(file, occurences = 40, writeToFile
 
 exports.findPairsInListsByBruteForce = findPairsInListsByBruteForce;
 
-// findPairsInListsByBruteForce('care_teams.csv');
+findPairsInListsByBruteForce('care_teams.csv', 40, true);

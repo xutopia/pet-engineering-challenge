@@ -11,7 +11,7 @@ const { BloomFilter } = require('bloom-filters');
  */
 const findPairsInListsByBloomFilter = function(file, occurences = 40, writeToFile) {
   const data = stdinput(file);
-  let bloomFilter = new BloomFilter(100, 0.05);
+  let bloomFilter = new BloomFilter(10, 0.5);
   let doctorPairs = {};
   let pairs = [];
 
@@ -50,4 +50,4 @@ const findPairsInListsByBloomFilter = function(file, occurences = 40, writeToFil
 
 exports.findPairsInListsByBloomFilter = findPairsInListsByBloomFilter;
 
-// findPairsInListsByBloomFilter('./care_teams.csv');
+// findPairsInListsByBloomFilter('./care_teams.csv', 40, true);
