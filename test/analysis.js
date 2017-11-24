@@ -3,15 +3,19 @@ const { findPairsInListsByBloomFilter } = require('../solutions/bloomFilter/inde
 const { findPairsInListsByCountMinSketch } = require('../solutions/countMinSketch/index');
 
 /**
- * Space analysis of each solution using Node's built in process methods
- * @param {Number} iterations (default: 1)
- * @return {Object} results
+ * Space and Time analysis of each solution using Node's built in process methods
+ * @constructor {Number} iterations (default: 100)
+ * @method {analyzeBruteForceSolution}
+ * @method {analyzeBloomFilterSolution}
+ * @method {analyzeCountMinSketchSolution}
+ * @method {displayAverageSpaceResults}
+ * @method {displayAverageTimeResults}
  */
 
 
 class SpaceAnalysis {
   constructor(interations) {
-    this.iterations = interations;
+    this.iterations = interations || 100;
     this.bruteForceSpace = [];
     this.bruteForceTime = [];
     this.bloomFilterSpace = [];
