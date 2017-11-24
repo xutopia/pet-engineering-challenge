@@ -6,11 +6,12 @@ const { BloomFilter } = require('bloom-filters');
  * Bloom Filter approach to determining the number of times pairs of doctors appear in multiple lists
  * @param {File} csvFile
  * @param {Number} occurences
+ * @param {Boolean} writeToFile
  * @return {Array} pairs - list of pairs of doctors that match the criteria
  */
-const findPairsInListsByBloomFilter = function(file, occurences = 40) {
+const findPairsInListsByBloomFilter = function(file, occurences = 40, writeToFile) {
   const data = stdinput(file);
-  let bloomFilter = new BloomFilter(1000000, 0.01);
+  let bloomFilter = new BloomFilter(100, 0.05);
   let doctorPairs = {};
   let pairs = [];
 
@@ -41,10 +42,12 @@ const findPairsInListsByBloomFilter = function(file, occurences = 40) {
     }
   }
 
-  stdoutput(pairs, `bloomFilterResult.csv`);
+  if (writeToFile) {
+    stdoutput(pairs, 'bloomFilterResult.csv');
+  }
   return pairs;
 }
 
-module.exports = findPairsInListsByBloomFilter;
+exports.findPairsInListsByBloomFilter = findPairsInListsByBloomFilter;
 
-findPairsInListsByBloomFilter('./care_teams.csv');
+// findPairsInListsByBloomFilter('./care_teams.csv');

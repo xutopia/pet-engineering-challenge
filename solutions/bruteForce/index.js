@@ -5,9 +5,10 @@ const stdoutput = require('../../io/stdoutput');
  * Brute force approach to determining the number of times pairs of doctors appear in multiple lists
  * @param {File} csvFile
  * @param {Number} occurences
+ * @param {Boolean} writeToFile
  * @return {Array} pairs - list of pairs of doctors that match the criteria
  */
-const findPairsInListsByBruteForce = function(file, occurences = 40) {
+const findPairsInListsByBruteForce = function(file, occurences = 40, writeToFile) {
   const data = stdinput(file);
   // console.log(data);
   let doctorPairs = {};
@@ -34,10 +35,12 @@ const findPairsInListsByBruteForce = function(file, occurences = 40) {
     }
   }
 
-  stdoutput(pairs, `bruteForceResult.csv`);
+  if (writeToFile) {
+    stdoutput(pairs, 'bruteForceResult.csv');
+  }
   return pairs;
 }
 
-module.exports = findPairsInListsByBruteForce;
+exports.findPairsInListsByBruteForce = findPairsInListsByBruteForce;
 
-findPairsInListsByBruteForce('./care_teams.csv');
+// findPairsInListsByBruteForce('care_teams.csv');
