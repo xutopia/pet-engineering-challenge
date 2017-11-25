@@ -1,8 +1,11 @@
 # PET Code Challenge
 
 The attached utf-8 encoded text file contains (mock) lists of care teams for 20,000 patients. Each line represents a list of doctors that a patient has seen, formatted as follows:
-```katie mitchell,steve edwards,melissa fleming,maurice simmmons,diane burke,debbie kuhn,tommy brooks,ella jennings
-carolyn jennings,katie price,marc mills,steve edwards,brooke burke,bob flores,melissa fleming,kristina roberts```
+```
+katie mitchell,steve edwards,melissa fleming,maurice simmmons,diane burke,debbie kuhn,tommy brooks,ella jennings
+carolyn jennings,katie price,marc mills,steve edwards,brooke burke,bob flores,melissa fleming,kristina roberts
+```
+
 Write a program that takes a file or standard input, and produces a list of pairs of doctors which appear together in at least 40 different lists. For example, in the above sample, "steve edwards" and "melissa fleming" appear together twice, but every other pair appears only once. Your program should output the pair list to stdout in the same form as the input (e.g. doctor1 name,doctor2 name\n).
 You MAY return an approximate solution, i.e. lists which appear at least 40 times with high probability, as long as you explain why this tradeoff improves the performance of the algorithm. Please include, either in comments or in a separate file, a brief description of the run-time and space complexity of your algorithm.
 Your solution should be implemented in Javascript. Please include compilation/runtime instructions with your code.
@@ -38,14 +41,6 @@ The use of a bloom filter presents a decrease in heap memory usage by roughly 2M
 
 The use of a count-min sketch seemed promising, but my implementation resulted in double the heap usage (around 85MB) compared to the bloom filter solution. The run-time of using a count-min sketch also increased on average by 1 second, relative to the run-time of the bloom filter solution.
 
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
