@@ -9,6 +9,6 @@ solutionAnalysis.analyzeBloomFilterSolution();
 solutionAnalysis.displayAverageSpaceResults('bloomFilterSpace');
 solutionAnalysis.displayAverageTimeResults('bloomFilterTime');
 
-// solutionAnalysis.analyzeCountMinSketchSolution();
-// solutionAnalysis.displayAverageSpaceResults('countMinSketchSpace');
-// solutionAnalysis.displayAverageTimeResults('countMinSketchTime');
+solutionAnalysis.analyzeCountMinSketchSolution();
+solutionAnalysis.displayAverageSpaceResults('countMinSketchSpace');
+solutionAnalysis.displayAverageTimeResults('countMinSketchTime');

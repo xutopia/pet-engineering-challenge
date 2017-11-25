@@ -31,7 +31,7 @@ Brute Force Solution Space Complexity: O(M * N^2)
 Bloom Filter Solution Time Complexity: O(M * N^2)
 Bloom Filter Solution Space Complexity: O(M * N^2) (less pairs of doctors that only appear once)
 
-Count Min Sketch Solution Time Complexity: O(M * N^2)
+Count Min Sketch Solution Time Complexity: O(M * N^3)
 Count Min Sketch Solution Space Complexity: O(K) (K = pairs of doctors that appear 40 or more times)
 
 
