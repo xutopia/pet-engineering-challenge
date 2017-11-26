@@ -12,10 +12,19 @@ Your solution should be implemented in Javascript. Please include compilation/ru
 
 ## Getting Started
 
-To run the standard test to find time and space usage for the brute force and bloom filter solution (assuming node and npm are installed):
-
+assuming node and npm are installed:
 ```
 $ npm i
+```
+
+To generate files with the solution set using the different strategies (brute force, bloom filter, count-min sketch):
+```
+$ npm start
+```
+
+To run the standard test to find time and space usage for the brute force, bloom filter, and count-min sketch solution:
+
+```
 $ npm test
 ```
 
@@ -41,6 +50,16 @@ The use of a bloom filter presents a decrease in heap memory usage by roughly 2M
 
 The use of a count-min sketch seemed promising, but my implementation resulted in double the heap usage (around 85MB) compared to the bloom filter solution. The run-time of using a count-min sketch also increased on average by 1 second, relative to the run-time of the bloom filter solution.
 
+
+## Next Steps
+
+Another probabilistic approach to this problem could be:
+1) Iterate over each list in the file
+2) create a map to determine how many times a name appear in the lists
+3) Using some reference (ie. brute force solution), and a subset of the names map, create pairs of names from the mapping and use a variation of gradient descent to tweak and determine coefficients that will lead to the solution set
+
+Time complexity = O(M*N) or O(N^2) (M = the number of lists in the input, N = average number of doctors per list)
+Space complexity = O(K) (K = unique doctor names among the lists)
 
 ## Authors
 

@@ -4,7 +4,8 @@
   "description": "Coding challenge for Cornell Medicine PET Web Front-end Developer (Mobile) role",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node main.js",
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",

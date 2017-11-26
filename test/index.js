@@ -1,4 +1,4 @@
-const Analysis = require('./test/analysis');
+const Analysis = require('./analysis');
 
 let solutionAnalysis = new Analysis(100);
 solutionAnalysis.analyzeBruteForceSolution();

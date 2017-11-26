@@ -45,4 +45,4 @@ const findPairsInListsByCountMinSketch = function(file, occurences = 40, writeTo
 
 exports.findPairsInListsByCountMinSketch = findPairsInListsByCountMinSketch;
 
-findPairsInListsByCountMinSketch('./care_teams.csv', 40, true);
+// findPairsInListsByCountMinSketch('./care_teams.csv', 40, true);
