@@ -1,0 +1,25 @@
+{
+  "name": "pet-engineering-challenge",
+  "version": "1.0.0",
+  "description": "Coding challenge for Cornell Medicine PET Web Front-end Developer (Mobile) role",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xutopia/pet-engineering-challenge.git"
+  },
+  "author": "Tony Xu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xutopia/pet-engineering-challenge/issues"
+  },
+  "homepage": "https://github.com/xutopia/pet-engineering-challenge#readme",
+  "dependencies": {
+    "bloom-filters": "^0.5.1",
+    "csvjson": "^4.3.4",
+    "path": "^0.12.7"
+  }
+}
